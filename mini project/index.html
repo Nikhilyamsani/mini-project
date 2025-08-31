@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Career Roadmap - Choose Your Path</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            color: #2d3436;
+        }
+
+        header {
+            background: linear-gradient(to right, #2d3436 0%, #000000 100%);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .back-button {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-5px);
+        }
+
+        .back-button::before {
+            content: '←';
+            font-size: 1.2rem;
+        }
+
+        .header-title h2 {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        main {
+            padding: 8rem 5% 4rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .intro-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #2d3436;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .intro-text {
+            text-align: center;
+            color: #636e72;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .path-button {
+            background: white;
+            border: none;
+            padding: 1.5rem;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .path-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, #0984e3 0%, #6c5ce7 100%);
+            color: white;
+        }
+
+        .path-button .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .path-button .label {
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .path-button .description {
+            font-size: 0.9rem;
+            color: #636e72;
+            text-align: center;
+        }
+
+        .path-button:hover .description {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .header-left {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            nav {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            main {
+                padding: 7rem 1rem 2rem;
+            }
+
+            .intro-container {
+                padding: 2rem 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .button-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .back-button {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <a href="javascript:history.back()" class="back-button">Back</a>
+                <div class="header-title">
+                    <h2>roadmap.io</h2>
+                </div>
+            </div>
+            <nav>
+                <a href="login.html">Login</a>
+                <a href="help.html">Help</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="intro-container">
+            <h1>Choose Your Educational Path</h1>
+            <p class="intro-text">Discover personalized career opportunities based on your educational background. Select your current educational qualification to explore potential career paths.</p>
+            
+            <div class="button-grid">
+                <button class="path-button" onclick="window.location.href='after-10th.html'">
+                    <span class="icon">📚</span>
+                    <span class="label">After 10th</span>
+                    <span class="description">Explore opportunities after completing 10th grade</span>
+                </button>
+                
+                <button class="path-button" onclick="window.location.href='after-12th.html'">
+                    <span class="icon">🎓</span>
+                    <span class="label">After 12th</span>
+                    <span class="description">Discover paths after higher secondary education</span>
+                </button>
+                
+                <button class="path-button" onclick="window.location.href='after-btech.html'">
+                    <span class="icon">💻</span>
+                    <span class="label">After B.Tech</span>
+                    <span class="description">Career options for engineering graduates</span>
+                </button>
+                
+                <button class="path-button" onclick="window.location.href='after-mtech.html'">
+                    <span class="icon">🔬</span>
+                    <span class="label">After M.Tech</span>
+                    <span class="description">Advanced opportunities for postgraduates</span>
+                </button>
+                
+                <button class="path-button" onclick="window.location.href='after-polytechnic.html'">
+                    <span class="icon">⚡</span>
+                    <span class="label">After Polytechnic</span>
+                    <span class="description">Technical career paths and opportunities</span>
+                </button>
+                
+                <button class="path-button" onclick="window.location.href='after-iti.html'">
+                    <span class="icon">🛠️</span>
+                    <span class="label">After ITI</span>
+                    <span class="description">Industrial training and skill-based careers</span>
+                </button>
+                
+                
+                <button class="path-button" onclick="window.location.href='after-other.html'">
+                    <span class="icon">🌟</span>
+                    <span class="label">Other Paths</span>
+                    <span class="description">Explore alternative career opportunities</span>
+                </button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,130 @@
+body {
+    font-family: 'Roboto', sans-serif; 
+    background-color:black;
+    margin: 0; 
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+header {
+    background: rgb(15, 15, 65); 
+    color: white;
+ 
+    width: 100%;
+    position: relative; 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+}
+.header-title {
+    display: flex;
+    justify-content:center;
+    flex-direction: column; 
+    align-items: flex-end; 
+}
+header h2 {
+    font-size: 1.2em; 
+    color: #f0f0f0;
+    display:flex;
+    justify-content: center;
+}
+
+nav {
+    margin-left: auto; 
+}
+nav a {
+    color: rgb(226, 12, 12);
+    margin: 0 10px; 
+    font-family: 'Roboto', sans-serif; 
+    padding: 15px 8px; 
+    border-radius: 3px; 
+    transition: background-color 0.3s; 
+}
+
+nav a:hover {
+    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+main {
+    margin: 20px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2em; 
+    margin-bottom: 20px; 
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: #11ded7; 
+    color: white; 
+    border: none; 
+    padding: 8px 12px; 
+    margin: 10px 0; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    width: 180px; 
+    font-size: 0.9em; 
+    transition: background-color 0.3s, color 0.3s; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+button:hover {
+    background-color: #218838; 
+    color: #ffc107; 
+}
+
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('.vscode\backgroundpic.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 30px; /* Reduced padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+button {
+    margin: 5px; 
+}

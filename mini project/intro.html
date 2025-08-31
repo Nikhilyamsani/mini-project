@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Welcome to Career Roadmap</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            background-color: #0f0f1b;
+        }
+
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+            z-index: -1;
+        }
+
+        .header {
+            height: 80px;
+            width: 100%;
+            background-color: rgba(15, 15, 27, 0.95);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ff6b6b;
+        }
+
+        .main-content {
+            margin-top: 80px;
+            min-height: calc(100vh - 80px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .intro-container {
+            margin: 2rem 0;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: #ff6b6b;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .intro2 {
+            background-color: rgba(15, 15, 27, 0.8);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            max-width: 800px;
+            backdrop-filter: blur(5px);
+        }
+
+        .intro2 p {
+            color: white;
+            font-size: 1.3rem;
+            line-height: 1.6;
+        }
+
+        .explore-button {
+            color: white;
+            background-color: #ff6b6b;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .explore-button:hover {
+            background-color: #ff5252;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .intro2 p {
+                font-size: 1.1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="/api/placeholder/1920/1080" alt="Education Background" class="background-image">
+
+    <header class="header">
+        <div class="logo">Roadmaps.io</div>
+        <nav class="nav-links">
+            <a href="login.html">Login</a>
+            <a href="contact.html">Contact</a>
+            <a href="help.html">Help</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="intro-container">
+            <h1>Welcome to<br>Career Roadmaps</h1>
+        </div>
+        <div class="intro2">
+            <p>Discover your perfect career path based on your educational background and interests.<br>
+            Let us guide you through your professional journey, whether you're just starting or looking to pivot.</p>
+        </div>
+        <button class="explore-button" onclick="window.location.href='index.html'">
+            Explore Now
+        </button>
+    </main>
+</body>
+</html>
